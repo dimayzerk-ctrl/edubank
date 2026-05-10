@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>Transfer Funds</h2>
+<form method="POST">
+    {{ form.hidden_tag() }}
+    {{ form.recipient.label }} {{ form.recipient() }}<br>
+    {{ form.amount.label }} {{ form.amount() }}<br>
+    {{ form.description.label }} {{ form.description() }}<br>
+    {{ form.submit() }}
+</form>
+{% endblock %}

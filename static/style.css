@@ -1,0 +1,21 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f4f4;
+    margin: 0;
+}
+nav {
+    background: #003366;
+    padding: 15px;
+}
+nav a {
+    color: white;
+    margin-right: 15px;
+    text-decoration: none;
+}
+.container {
+    width: 80%;
+    margin: auto;
+    padding: 20px;
+    background: white;
+    margin-top: 20px;
+}

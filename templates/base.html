@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>EduBank</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<nav>
+    <a href="/">Home</a>
+    {% if current_user.is_authenticated %}
+        <a href="/dashboard">Dashboard</a>
+        <a href="/transfer">Transfer</a>
+        <a href="/history">History</a>
+        <a href="/logout">Logout</a>
+    {% else %}
+        <a href="/login">Login</a>
+        <a href="/register">Register</a>
+    {% endif %}
+</nav>
+<div class="container">
+    {% with messages = get_flashed_messages() %}
+        {% for message in messages %}
+            <p>{{ message }}</p>
+        {% endfor %}
+    {% endwith %}
+    {% block content %}{% endblock %}
+</div>
+</body>
+</html>
